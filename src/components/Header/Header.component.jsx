@@ -119,7 +119,7 @@ function Header() {
           </div>
           <FormControlLabel
             control={<Switch aria-label="login switch" />}
-            classeName={classes.toggle}
+            className={classes.toggle}
           />
           <AccountCircle className={classes.loginIcon} />
         </Toolbar>

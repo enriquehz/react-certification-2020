@@ -1,38 +1,28 @@
-import React, { useLayoutEffect } from 'react';
-// import { BrowserRouter, Switch } from 'react-router-dom';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import AuthProvider from '../../providers/Auth';
-// import Fortune from '../Fortune';
-// import Layout from '../Layout';
 import Header from '../Header';
-import { random } from '../../utils/fns';
+import VideoGrid from '../VideoGrid';
+import mockedData from './mockFile.json';
+// import Layout from '../Layout';
+// import { BrowserRouter, Switch } from 'react-router-dom';
+// import { random } from '../../utils/fns';
+
+const { items } = mockedData;
+console.log(items);
 
 function App() {
-  useLayoutEffect(() => {
-    const { body } = document;
-
-    function rotateBackground() {
-      const xPercent = random(100);
-      const yPercent = random(100);
-      body.style.setProperty('--bg-position', `${xPercent}% ${yPercent}%`);
-    }
-
-    const intervalId = setInterval(rotateBackground, 3000);
-    body.addEventListener('click', rotateBackground);
-
-    return () => {
-      clearInterval(intervalId);
-      body.removeEventListener('click', rotateBackground);
-    };
-  }, []);
-
   return (
     <BrowserRouter>
       <AuthProvider>
-        <Header />
+        <div>
+          <Header />
+        </div>
+        <div>
+          <VideoGrid items={items} />
+        </div>
       </AuthProvider>
     </BrowserRouter>
   );
 }
-
 export default App;
