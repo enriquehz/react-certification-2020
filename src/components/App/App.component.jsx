@@ -9,7 +9,6 @@ import mockedData from './mockFile.json';
 // import { random } from '../../utils/fns';
 
 const { items } = mockedData;
-console.log(items);
 
 function App() {
   return (

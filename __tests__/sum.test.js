@@ -1,8 +1,4 @@
-function sum(a, b) {
-  return a + b;
-}
-module.exports = sum;
+import { shallow } from 'enzyme';
+import Header from '../src/components/Header';
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
-});
+const wrapper = shallow(<Header />);
