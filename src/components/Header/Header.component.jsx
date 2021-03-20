@@ -102,7 +102,7 @@ function Header() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            MyApp
+            MyVideoApp
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>

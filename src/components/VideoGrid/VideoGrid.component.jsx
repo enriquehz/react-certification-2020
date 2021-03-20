@@ -37,7 +37,7 @@ function videoGrid({ items }) {
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={300} className={classes.gridList} cols={5}>
+      <GridList cellHeight={200} className={classes.gridList} cols={5}>
         {visibleItems.map((item) => (
           <GridListTile key={item.etag}>
             <img
